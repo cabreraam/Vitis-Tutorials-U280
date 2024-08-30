@@ -71,21 +71,21 @@ export XCL_EMULATION_MODE=sw_emu
 Output:
 
 ```bash
-Found Platform
-Platform Name: Xilinx
-INFO: Reading build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin
-Loading: 'build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin'
+Open the device0
 CRITICAL WARNING: [SW-EM 09-0] Unable to find emconfig.json. Using default device "xilinx:pcie-hw-em:7v3:1.0"
-Trying to program device[0]: xilinx:pcie-hw-em:7v3:1.0
+Load the xclbin sw_emu/vadd.xclbin
 Kernel Name: vadd_1, CU Number: 0, Thread creation status: success
-Device[0]: program successful!
+Allocate Buffer in Global Memory
+synchronize input buffer data to device global memory
+Execution of the kernel
 Kernel Name: vadd_1, CU Number: 0, State: Start
 Kernel Name: vadd_1, CU Number: 0, State: Running
 Kernel Name: vadd_1, CU Number: 0, State: Idle
+Get the output data from the device
 TEST PASSED
 device process sw_emu_device done
 Kernel Name: vadd_1, CU Number: 0, Status: Shutdown
-INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 256
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 4096
 ```
 
 - HW emulation 
