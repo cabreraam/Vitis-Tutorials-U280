@@ -145,3 +145,8 @@ Trying to program device[0]: xilinx_u280_gen3x16_xdma_base_1
 Device[0]: program successful!
 TEST PASSED
 ```
+Note: If an error pops up, try unsetting the XCL_EMULATION_MODE variable.
+
+'''bash
+unset XCL_EMULATION_MODE
+'''
