@@ -65,7 +65,7 @@ export XCL_EMULATION_MODE=sw_emu
 ```
 
 ```bash
-./hello_world ./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin
+./hello_world_xrt -x ./build_dir.sw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin
 ```
 
 Output:
@@ -99,7 +99,7 @@ sudo /proj/octfpga-PG0/tools/Xilinx/Vitis/2023.1/scripts/installLibs.sh
 ```
 
 ```bash
-./hello_world ./build_dir.hw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin
+./hello_world_xrt -x ./build_dir.hw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin
 ```
 
 Output:
@@ -136,7 +136,7 @@ scp -i ~/.ssh/<your cloudlab private key> hello_world ./build_dir.hw.xilinx_u280
 On the Cloudlab server run the application.
 
 ```bash
-./hello_world vadd.xclbin
+./hello_world_xrt -x vadd.xclbin
 ```
 You should see "TEST PASSED" printed on the terminal.
 
