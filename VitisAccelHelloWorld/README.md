@@ -147,6 +147,6 @@ TEST PASSED
 ```
 Note: If an error pops up, try unsetting the XCL_EMULATION_MODE variable.
 
-'''bash
+```bash
 unset XCL_EMULATION_MODE
-'''
+```
