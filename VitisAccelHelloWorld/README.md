@@ -72,7 +72,6 @@ Output:
 
 ```bash
 Open the device0
-CRITICAL WARNING: [SW-EM 09-0] Unable to find emconfig.json. Using default device "xilinx:pcie-hw-em:7v3:1.0"
 Load the xclbin sw_emu/vadd.xclbin
 Kernel Name: vadd_1, CU Number: 0, Thread creation status: success
 Allocate Buffer in Global Memory
@@ -104,23 +103,22 @@ sudo /proj/octfpga-PG0/tools/Xilinx/Vitis/2023.1/scripts/installLibs.sh
 
 Output:
 ```bash
-Found Platform
-Platform Name: Xilinx
-INFO: Reading build_dir.hw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin
-Loading: 'build_dir.hw_emu.xilinx_u280_gen3x16_xdma_1_202211_1/vadd.xclbin'
-CRITICAL WARNING: [HW-EMU 08-0] Unable to find emconfig.json. Using default device "xilinx:pcie-hw-em:7v3:1.0"
-Trying to program device[0]: xilinx:pcie-hw-em:7v3:1.0
-INFO: [HW-EMU 05] Path of the simulation directory : /home/ubuntu/Vitis_Accel_Examples/hello_world/.run/227428/hw_em/device0/binary_0/behav_waveform/xsim
+Open the device0
+Load the xclbin hw_emu/vadd.xclbin
+INFO: [HW-EMU 05] Path of the simulation directory : /users/ubuntu/Vitis-Tutorials-U280/VitisAccelHelloWorld/prebuilt/.run/13303/hw_emu/device0/binary_0/behav_waveform/xsim
 
- server socket name is	/tmp/ubuntu/device0_0_227428
+ server socket name is  /tmp/ubuntu/device0_0_13303
 INFO: [HW-EMU 01] Hardware emulation runs simulation underneath. Using a large data set will result in long simulation times. It is recommended that a small dataset is used for faster execution. The flow uses approximate models for Global memories and interconnect and hence the performance data generated is approximate.
-configuring penguin scheduler mode
-scheduler config ert(0), dataflow(1), slots(16), cudma(1), cuisr(0), cdma(0), cus(1)
-Device[0]: program successful!
+configuring dataflow mode with ert polling
+scheduler config ert(1), dataflow(1), slots(16), cudma(0), cuisr(0), cdma(0), cus(1)
+Allocate Buffer in Global Memory
+synchronize input buffer data to device global memory
+Execution of the kernel
+Get the output data from the device
 TEST PASSED
 INFO: [HW-EMU 06-0] Waiting for the simulator process to exit
 INFO: [HW-EMU 06-1] All the simulator processes exited successfully
-INFO: [HW-EMU 07-0] Please refer the path "/home/ubuntu/Vitis_Accel_Examples/hello_world/.run/227428/hw_em/device0/binary_0/behav_waveform/xsim/simulate.log" for more detailed simulation infos, errors and warnings.
+INFO: [HW-EMU 07-0] Please refer the path "/users/ubuntu/Vitis-Tutorials-U280/VitisAccelHelloWorld/prebuilt/.run/13303/hw_emu/device0/binary_0/behav_waveform/xsim/simulate.log" for more detailed simulation infos, errors and warnings.
 ```
 
 ### 3.2 Run on FPGA hardware
@@ -141,12 +139,12 @@ On the Cloudlab server run the application.
 You should see "TEST PASSED" printed on the terminal.
 
 ```bash
-Found Platform
-Platform Name: Xilinx
-INFO: Reading vadd.xclbin
-Loading: 'vadd.xclbin'
-Trying to program device[0]: xilinx_u280_gen3x16_xdma_base_1
-Device[0]: program successful!
+Open the device0
+Load the xclbin hw/vadd.xclbin
+Allocate Buffer in Global Memory
+synchronize input buffer data to device global memory
+Execution of the kernel
+Get the output data from the device
 TEST PASSED
 ```
 Note: If an error pops up, try unsetting the XCL_EMULATION_MODE variable.
