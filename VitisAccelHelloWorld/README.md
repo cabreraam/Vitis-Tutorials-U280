@@ -9,7 +9,7 @@ Access to a build machine equipped with Vitis 2023.1 is required. If you don't h
 
 ## Tools
 
-- Vitis 2022.2 or Vitis 2023.1
+- Vitis ~~2022.2 or~~ Vitis 2023.1
 
 ## 1. Clone the repository
 
