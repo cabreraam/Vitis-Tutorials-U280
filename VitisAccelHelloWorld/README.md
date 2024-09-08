@@ -1,6 +1,6 @@
 # Vitis Accel Hello World Example on U280
 
-This guide provides step by step instructions to build and run the hello world (vector addition) example in https://github.com/Xilinx/Vitis_Accel_Examples on a Xilinx U280 target. 
+This guide provides step by step instructions to build and run the hello world (vector addition) example in https://github.com/Xilinx/Vitis_Accel_Examples on a Xilinx U280 target.
 
 
 ## Prerequisites
@@ -22,7 +22,7 @@ git clone https://github.com/Xilinx/Vitis_Accel_Examples
 Make sure that ```XILINX_VITIS``` and ```XILINX_XRT``` environment variables are set. This can be done by
 
 ```bash
-source /tools/Xilinx/Vitis/2022.2/settings64.sh
+source /tools/Xilinx/Vitis/2023.1/settings64.sh
 ```
 
 ```bash
@@ -58,7 +58,7 @@ make all TARGET=hw PLATFORM=/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202
 
 ### 3.1 Run software and hardware emulation
 
-- SW emulation 
+- SW emulation
 
 ```bash
 export XCL_EMULATION_MODE=sw_emu
@@ -87,7 +87,7 @@ Kernel Name: vadd_1, CU Number: 0, Status: Shutdown
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 4096
 ```
 
-- HW emulation 
+- HW emulation
 
 ```bash
 export XCL_EMULATION_MODE=hw_emu
@@ -119,7 +119,7 @@ INFO: [HW-EMU 07-0] Please refer the path "/users/ubuntu/Vitis-Tutorials-U280/Vi
 
 ### 3.2 Run on FPGA hardware
 
-To run on FPGA hardware, copy the xclbin and the executable (hello_world) to the cloudlab server. Before doing this, make sure you place the CloudLab private key in the ~/.ssh/ directory on the NERC machine. If your CloudLab private key was generated using PuTTY, it needs to be converted to OpenSSH format before being placed on the NERC machine. Follow [these](https://github.com/OCT-FPGA/OCT-Tutorials/blob/master/managing-keys/key-conversion.md) instructions for key conversion. 
+To run on FPGA hardware, copy the xclbin and the executable (hello_world) to the cloudlab server. Before doing this, make sure you place the CloudLab private key in the ~/.ssh/ directory on the NERC machine. If your CloudLab private key was generated using PuTTY, it needs to be converted to OpenSSH format before being placed on the NERC machine. Follow [these](https://github.com/OCT-FPGA/OCT-Tutorials/blob/master/managing-keys/key-conversion.md) instructions for key conversion.
 
 For example, if you want to copy these files to the home directory of pc151.cloudlab.umass.edu, you use the following command:
 
